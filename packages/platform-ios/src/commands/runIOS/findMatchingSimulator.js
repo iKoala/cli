@@ -33,6 +33,14 @@ function findMatchingSimulator(simulators, simulatorString) {
   //   : [];
 
   // Changed to support new Xcode simulator name and iOS/tvOS version support
+  // Support old format, e.g. "iPhone XS (12.2)""
+  // e.g. --simulator='iPad Pro (9.7-inch)'
+  // e.g. --simulator='iPad Pro (9.7-inch) (12.2)'
+  // const parsedSimulatorName = simulatorString
+  //   ? simulatorString.match(/(.*)? (?:\((\d+\.\d+)?\))$/)
+  //   : [];
+
+  // Changed to support new Xcode simulator name and iOS/tvOS version support
   // e.g. --simulator='iPhone XS'
   // e.g. --simulator='iPhone XS - 12.0'
   // e.g. --simulator='iPad Pro (9.7-inch)'
